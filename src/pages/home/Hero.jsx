@@ -1,11 +1,11 @@
 import { Button, Card } from "@gravity-ui/uikit";
 import styles from './Hero.module.css';
-
+import './globus.css'
 export function Hero({ onGoToCatalog }) {
     return (
         <section>
             <Card className={styles.wrapper}>
-                <div>
+                <div className={styles.infoContainer}>
                     <h1>Белорусское торговое объединение «Глобус»</h1>
                     <p style={{ fontSize: "18px", marginBottom: "20px" }}>
                         Современный интернет-каталог товаров для образования и организаций
@@ -19,13 +19,16 @@ export function Hero({ onGoToCatalog }) {
                         </Button>
                     </div>
                 </div>
-                <div className={styles.videoContainer}>
-                    <video>
-                        <source
-                            src="/globusVid.mp4"
-                            type="video/mp4"
-                        />
-                    </video>
+                <div className="globe-container">
+                    <div className="globe">
+                        <div className="globe-sphere"></div>
+                        <div className="globe-outer-shadow"></div>
+                        <div className="globe-worldmap">
+                            <div className="globe-worldmap-back"></div>
+                            <div className="globe-worldmap-front"></div>
+                        </div>
+                        <div className="globe-inner-shadow"></div>
+                    </div>
                 </div>
             </Card>
         </section>

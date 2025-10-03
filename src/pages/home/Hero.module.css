@@ -6,15 +6,20 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 100px;
+    height: 60vh;
+    overflow: hidden;
 }
 
 .buttonWrapper {
     display: flex;
     width: 100px;
+    margin-top: 12px;
 }
 
-.videoContainer {
-    position: relative;
-    top:0;
-    left:25%;
+.infoContainer{
+    z-index: 2;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
