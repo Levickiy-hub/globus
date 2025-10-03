@@ -1,0 +1,36 @@
+:root {
+  --color-primary: #005BBB;
+  /* глубокий синий */
+  --color-secondary: #80D0FF;
+  /* голубой */
+  --color-text: #1a2e5a;
+  /* тёмно-синий */
+  --color-bg: #ffffff;
+  --color-muted: #666666;
+
+  --container-width: 1200px;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  font-weight: 400;
+}
+
+section {
+  margin-bottom: 60px;
+}
