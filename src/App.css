@@ -9,13 +9,18 @@
   --color-muted: #666666;
 
   --container-width: 1200px;
+
+  --section-padding: 60px 0;
+  --section-padding-top:60px;
+  --section-margin: 40px 0;
 }
 
 body {
   margin: 0;
-  background: var(--color-bg);
-  color: var(--color-text);
+  background: var(--g-color-base-background);
+  color: var(--g-color-text-primary);
   line-height: 1.6;
+  font-family: var(--g-font-family-sans);
 }
 
 .container {
@@ -29,8 +34,4 @@ h2,
 h3 {
   margin-top: 0;
   font-weight: 400;
-}
-
-section {
-  margin-bottom: 60px;
 }

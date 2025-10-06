@@ -1,10 +1,11 @@
 import { Button, Card } from "@gravity-ui/uikit";
 import styles from './Hero.module.css';
-import './globus.css'
+import './globus.css';
+
 export function Hero({ onGoToCatalog }) {
     return (
-        <section>
-            <Card className={styles.wrapper}>
+        <section className={styles.section}>
+            <Card className={styles.wrapper} view='clear'>
                 <div className={styles.infoContainer}>
                     <h1>Белорусское торговое объединение «Глобус»</h1>
                     <p style={{ fontSize: "18px", marginBottom: "20px" }}>

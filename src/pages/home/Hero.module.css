@@ -1,12 +1,13 @@
+.section{
+    margin: var(--section-margin);
+}
 .wrapper {
     padding: 60px;
-    margin-top: 40px;
     background: linear-gradient(135deg, #005BBB, #80D0FF);
     color: #fff;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 100px;
-    height: 60vh;
+    height: 66vh;
     overflow: hidden;
 }
 
