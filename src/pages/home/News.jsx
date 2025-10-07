@@ -11,7 +11,7 @@ export function News() {
     return (
         <section className={styles.section}>
             <div className={styles.title}>
-                <Text variant="header-2" weight="bold">Новости</Text>
+                <Text variant="header-2" weight="bold" className={styles.titleText}>Новости</Text>
             </div>
             {news.map(item => (
                 <Card key={item.id} className={styles.card}>
@@ -28,9 +28,9 @@ export function News() {
                     </Text>
                 </Card>
             ))}
-            <Card className={`${styles.allNewsCard} ${styles.card}`}>
+            <div className={styles.allNewsCard}>
                 <Button view='action' size='xl'>Все новости</Button>
-            </Card>
+            </div>
         </section>
     );
 }

@@ -1,0 +1,51 @@
+/* Catalog.module.css */
+.container {}
+
+.header {}
+
+.title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.breadcrumbsWrapper {}
+
+.mainContent {}
+
+/* Первый ряд - только карточки */
+.firstRow {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+/* Второй ряд - карточка-поиск-карточка */
+.secondRow {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+/* Третий ряд - карточки в 3 колонки */
+.thirdRow {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+/* Четвертый ряд - карточки в 4 колонки */
+.fourthRow {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.cardWrapper{
+
+}

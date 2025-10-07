@@ -63,7 +63,7 @@ export function Documents() {
     return (
         <section className={styles.section}>
             <div className={styles.title}>
-                <Text variant="header-2" weight="bold">Документы</Text>
+                <Text variant="header-2" weight="bold" className={styles.titleText}>Документы</Text>
             </div>
             <div className={styles.wrapper}>
                 <ul className={styles.sidebar}>

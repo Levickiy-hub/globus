@@ -1,0 +1,87 @@
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: linear-gradient(135deg,
+        var(--g-color-private-blue-700-solid),
+        var(--g-color-private-blue-900-solid));
+    position: relative;
+    overflow: hidden;
+}
+
+/* Анимированный фон */
+.section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 215, 0, 0.15) 0px,
+        rgba(255, 215, 0, 0.15) 2px,
+        transparent 4px,
+        transparent 60px
+    );
+    animation: moveLines 12s linear infinite;
+}
+
+@keyframes moveLines {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 120px 120px;
+    }
+}
+
+.wrapper {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.card {
+    background: var(--g-color-base-float);
+    box-shadow: var(--g-shadow-large);
+    border-radius: var(--g-border-radius-2xl);
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Крупная цифра */
+.circle {
+    font-size: 140px;
+    font-weight: 800;
+    color: var(--g-color-private-gold-500, #FFD700);
+    text-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+}
+
+.title {
+    color: var(--g-color-text-primary);
+    font-size: 32px;
+}
+
+.subtitle {
+    color: var(--g-color-text-secondary);
+    max-width: 500px;
+}
+
+.button {
+    margin-top: 20px;
+    font-weight: 600;
+}

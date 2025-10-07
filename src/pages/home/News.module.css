@@ -24,6 +24,7 @@
 }
 
 .allNewsCard {
+    margin-top:16px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,4 +32,8 @@
 
 .title {
     margin-bottom: 40px;
+}
+
+.titleText{
+    font-size: 40px;
 }
