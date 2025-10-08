@@ -1,11 +1,17 @@
-
+import { Card, Text } from '@gravity-ui/uikit';
 import styles from './ProductCard.module.css';
 
-export function ProductCard({ children }) {
+export function ProductCard({ children, image }) {
     return (
-        <div className={styles.container}>
-            <h2>Картинка</h2>
-            <h1>{children}</h1>
-        </div>
+        <Card className={styles.container}>
+            <div className={styles.imageWrapper}>
+                <img src={image} alt={children} className={styles.image} />
+            </div>
+
+            <Text variant="subheader-3" weight="bold" className={styles.title}>
+                {children}
+            </Text>
+
+        </Card>
     );
 }

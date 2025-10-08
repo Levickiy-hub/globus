@@ -1,51 +1,115 @@
-/* Catalog.module.css */
-.container {}
+.container {
+    margin-top: var(--section-margin-top);
+}
 
-.header {}
+.header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 48px;
+}
 
 .title {
     font-size: 48px;
     font-weight: 700;
-    margin-bottom: 20px;
-    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+    color: var(--g-color-text-primary);
 }
 
-.breadcrumbsWrapper {}
+/* --- GRID --- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* ровно 5 карточек в ряд */
+    gap: 32px;
+    justify-items: center;
+}
 
-.mainContent {}
-
-/* Первый ряд - только карточки */
-.firstRow {
+/* --- SEARCH CARD --- */
+.searchCard {
+    background: radial-gradient(circle at 80% 50%,  #e4b200,#ffd76b);
+    color: #fff;
+    padding: 48px 32px;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 12px 24px rgba(228, 178, 0, 0.4);
+    border-radius: var(--g-border-radius-l);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Центрируем вторая строка, середина (3-я колонка) */
+@media (min-width: 1024px) {
+    .searchCard {
+        grid-column: 2 / span 3;
+        /* центр — займёт 3 колонки, начиная со 2-й */
+        grid-row: 2;
+    }
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    }
+
+    .searchCard {
+        grid-column: auto;
+        width: 100%;
+    }
+}
+
+.searchCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(228, 178, 0, 0.5);
+}
+
+.searchTitle {
+    margin-bottom: 12px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.searchInput {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: var(--g-border-radius-xl);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
 }
 
-/* Второй ряд - карточка-поиск-карточка */
-.secondRow {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
+.searchInput input {
+    background-color: transparent !important;
+    color: var(--g-color-text-primary);
 }
 
-/* Третий ряд - карточки в 3 колонки */
-.thirdRow {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
+.searchDescription {
+    color: #fff;
+    opacity: 0.9;
+    margin-bottom: 24px;
+    max-width: 600px;
+    line-height: 1.4;
 }
 
-/* Четвертый ряд - карточки в 4 колонки */
-.fourthRow {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+@media (max-width: 768px) {
+    .title {
+        font-size: 36px;
+        text-align: center;
+    }
 
-}
+    .grid {
+        gap: 24px;
+    }
 
-.cardWrapper{
+    .searchCard {
+        grid-column: span 1;
+        max-width: 100%;
+    }
 
+    .searchInput {
+        max-width: 300px;
+    }
 }

@@ -1,0 +1,62 @@
+.modalWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    max-width: 90vw;
+    padding: 32px 40px 48px;
+    background: var(--g-color-base-background);
+    border-radius: var(--g-border-radius-l);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.closeButton {
+    color: var(--g-color-text-secondary);
+    transition: color 0.2s ease;
+}
+
+.closeButton:hover {
+    color: var(--g-color-text-primary);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--g-color-text-secondary);
+}
+
+.submitBtn {
+    margin-top: 24px;
+    align-self: center;
+    min-width: 220px;
+}
+
+
+.textArea {
+    width: 100%;
+    resize: vertical;
+}

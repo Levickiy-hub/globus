@@ -28,8 +28,8 @@ export function Documents() {
         },
         {
             id: 4,
-            title: 'Инные документы',
-            description: 'Инные документы',
+            title: 'Иные документы',
+            description: 'Иные документы',
             href: ''
         }
     ];
