@@ -1,0 +1,173 @@
+.productCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    width: 320px;
+    min-height: 420px;
+    padding: 24px;
+    border-radius: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.productCard:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.name{
+    font-size: 24px;
+}
+
+/* SKU и рейтинг */
+.sku {
+    font-size: 14px;
+    color: #888;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 44px;
+}
+
+.ratingRow {
+    display: flex;
+    gap: 8px
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+}
+
+.star {
+    color: #ffc107;
+    width: 16px;
+    height: 16px;
+}
+
+.starEmpty {
+    color: #e0e0e0;
+    width: 16px;
+    height: 16px;
+}
+
+/* Блок с кнопками */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.cartButton {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.cartButton:hover {
+    transform: translateY(-1px);
+}
+
+.count {
+    width: 160px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.tag {
+    background: #f0f0f0;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    padding: 6px 12px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.tag:hover {
+    background: #0078d2;
+    border-color: #0078d2;
+}
+
+.tag:hover .tagText {
+    color: white;
+}
+
+.tagText {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.actionButtons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.favoriteButton {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: background-color 0.2s ease;
+}
+
+.favoriteButton:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.heart {
+    color: red;
+}
+
+/* Особенности */
+.features {
+    margin-top: 12px;
+}
+
+.featuresList {
+    margin-top: 6px;
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #444;
+}
+
+.featuresList li {
+    margin-bottom: 6px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .productCard {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .cartButton {
+        width: 100%;
+    }
+}

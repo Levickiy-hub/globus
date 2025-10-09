@@ -6,6 +6,7 @@ import Footers from "./widgets/Footer/Footer";
 import "./App.css";
 import { NotFound } from "./pages/notFound/NotFound";
 import { SubCatalog } from "./pages/subCatalog/SubCatalog";
+import { Product } from "./pages/product/Product";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/catalog/:name" element={<SubCatalog />} />
+          <Route path="/catalog/:name/:productname" element={<Product />} />
           <Route path="*" element={<NotFound/>}/>
         </Routes>
       </main >

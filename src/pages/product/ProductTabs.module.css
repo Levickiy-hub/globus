@@ -1,0 +1,190 @@
+.detailsCard {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+/* --- Tabs --- */
+.tabs {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+    height: 40px;
+}
+
+.tab {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    border-radius: 12px 12px 0 0;
+    transition: all 0.25s ease;
+}
+
+.tab:hover {
+    color: var(--g-color-text-link);
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.tabActive {
+    color: #000;
+    background: #fff;
+    font-weight: 600;
+    border-bottom: 2px solid var(--g-color-text-link);
+}
+
+/* --- Tab content --- */
+.tabContent {
+    margin-top: 12px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Описание --- */
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+
+.descriptionText {
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.usage {
+    margin-top: 12px;
+}
+
+.usage ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.usage li {
+    margin-bottom: 6px;
+}
+
+/* --- Характеристики --- */
+.specifications {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.specRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.specKey {
+    font-weight: 500;
+    color: #555;
+}
+
+.specValue {
+    color: #222;
+}
+
+/* --- Отзывы --- */
+.reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.reviewSummary {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.ratingOverview {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ratingNumber {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.reviewList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.review {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.reviewHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+}
+
+.star {
+    color: #ffc107;
+    width: 16px;
+    height: 16px;
+}
+
+.starEmpty {
+    color: #e0e0e0;
+    width: 16px;
+    height: 16px;
+}
+
+/* --- Адаптив --- */
+@media (max-width: 768px) {
+    .tab {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .specRow {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .reviewSummary {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
