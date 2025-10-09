@@ -1,4 +1,6 @@
 .aside {
+    position: sticky;
+    top: 100px;
     width: 260px;
     background: #f7f9fb;
     border-radius: 16px;

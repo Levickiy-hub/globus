@@ -1,5 +1,5 @@
 .container {
-
+    margin-top: var(--section-margin-top);
 }
 
 .header{
@@ -7,4 +7,8 @@
 }
 .wrapper {
     display: flex;
+}
+
+.productsGrid{
+    margin-left: 60px;
 }

@@ -1,0 +1,98 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 60px;
+}
+
+.titleContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+/* Заголовок */
+.title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+    transition: color 0.3s ease;
+    margin:0;
+}
+
+.titleContainer:hover .title {
+    color: var(--g-color-private-yellow-600-solid);
+}
+
+.iconContainer {
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.arrowIcon {
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: var(--g-color-text-secondary);
+}
+
+.arrowIconDown {
+    transform: rotate(0deg);
+}
+
+.arrowIconUp {
+    transform: rotate(180deg);
+}
+
+.titleContainer:hover .arrowIcon {
+    color: var(--g-color-private-yellow-600-solid);
+}
+
+.gridWrapper {
+    padding: 0 24px;
+    /* transition: max-height 0.5s ease, opacity 0.4s ease; */
+}
+
+.expanded {
+    opacity: 1;
+}
+
+.collapsed {
+    max-height: 0;
+    opacity: 0;
+}
+
+/* Сетка карточек */
+.grid {
+    display: flex;
+    width: 100%;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+/* Адаптив */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    .title {
+        font-size: 18px;
+    }
+}
